@@ -9,17 +9,21 @@ body {
 
 main {
     position: relative;
-    max-width: 700px;
+    box-sizing: border-box;
+    max-width: 800px;
     min-width: 320px;
-    margin: 4rem auto;
+    margin: 4rem auto 8rem auto;
     padding: 4rem 4rem;
     background-color: #fafafa;
     border-radius: 0.3rem;
 }
 
+#page-title {
+    font-size: 20px;
+}
+
 .profile {
     display: flex;
-    transform: translate(-4px, -4px);
     font-size: 16px;
 }
 
@@ -50,6 +54,11 @@ p {
     margin-bottom: 1rem;
 }
 
+li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
 a {
     color: #4d87b9;
     text-decoration: none;
@@ -67,13 +76,13 @@ hr {
     
 }
 
-.link-list {
+.social-link-list {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-.link {
+.social-link {
     width: 70px;
     height: 70px;
 
@@ -84,7 +93,7 @@ hr {
     border-radius: 50%;
 
     background-color: #ffffff;
-    border: 2px solid #eeeeee;
+    border: 2px solid #E2E6E9;
 
     transition: 0.3s;
 
@@ -93,13 +102,13 @@ hr {
     justify-content: center;
 }
 
-.link:hover {
+.social-link:hover {
     background-color: #eeeeee;
-    border: 2px solid #dddddd;
+    border: 2px solid #d1d5d8;
     transform: scale(1.1);
 }
 
-.link-icon {
+.social-link-icon {
     width: 40px;
     height: 40px;
 }
@@ -115,19 +124,12 @@ hr {
 
     display: flex;
     flex-wrap: nowrap;
-    
-    /* Set a specific width for the container, e.g., 100% of the viewport */
+
     width: 100%;
     height: 20rem;
-    
-    /* Enable horizontal scrolling only when content overflows the X-axis */
+
     overflow-x: auto;
-    
-    /* Hide the vertical scrollbar, if desired */
-    /* overflow-y: hidden;  */
-    
-    /* Prevent content (like text) from wrapping to the next line, forcing it onto a single line */
-    /* white-space: nowrap; */
+
     gap: 12px;
     padding: 0px 4rem;
 }
@@ -155,40 +157,55 @@ hr {
 
     padding: 6px;
     margin: 0px;
+    gap: 6px;
     border: 2px solid #E2E6E9;
     border-radius: 16px;
 
     display: flex;
-    width: 300px;
+    /* width: 300px; */
     justify-content: space-around;
 
     background: #ffffff;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-    gap: 15px
 }
 
 .tab {
-    margin: 0px;
-    border-radius: 10px;
-    
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 5px;
 
-    flex-grow: 1;
+    margin: 0px;
+    padding: 6px 16px 6px 16px;
+    border-width: 0px;
+
+    border-radius: 10px;
     background: #ffffff;
-    
 
     transition: 0.3s;
+}
+
+.tab-icon {
+    width: 36px;
+}
+
+.tab-label {
+    font-size: 1rem;
+    color: #000000;
+    margin: 0px;
+    padding: 0px;
 }
 
 .tab:hover {
     background: #eeeeee;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     main {
+        margin: 2rem auto 8rem auto;
         padding: 3rem 2rem;
+        border-radius: 1rem;
     }
 
     .profile {

@@ -9,95 +9,41 @@
 </head>
 <body>
   <main>
-    <div class="profile">
-      <img src="images/profile.jpg" alt="Profile image" class="profile-circle">
-      <div class="profile-circle" style="background-color: #C0D1DC; margin-left: -2em; z-index: 99;">
-        <img src="images/textmark.svg" class="wordmark"/>
+    <div style="display: flex; gap: 20px; align-items: center;">
+      <div class="profile" style="transform: translate(-4px, -4px);">
+        <img src="images/profile.jpg" alt="Profile image" class="profile-circle">
+        <div class="profile-circle" style="background-color: #C0D1DC; margin-left: -2em; z-index: 99;">
+          <img src="images/textmark.svg" class="wordmark"/>
+        </div>
       </div>
+      <div id="page-title">簡介</div>
     </div>
 
     <div style="height: 15px;"></div>
-    
-    <p>
-      我是 東／Eastern。
-    </p>
 
-    <p>
-      雖然上面那張圖看起來很紅但其實是棕色的狼。
-    </p>
-
-    <p>
-      這個名字並沒有什麼特別的由來，我只是單純喜歡「東」這個字的發音，也覺得它相當溫和中性。如果覺得一個字不太好念的話，也可以叫我「阿東」。
-    </p>
-
-    <p>
-      目前還在讀書，主要在<a href="https://www.facebook.com/NTUFurry/">臺大獸文化交流社</a>出沒。因為這個社團的關係，我從 2024 年開始比較積極地參與獸圈，在那之前雖然也去過幾次獸聚，但還是網路上潛水居多。
-    </p>
-
-    <hr>
-
-    <p>
-      興趣的部分主要是畫圖和設計。
-    </p>
-
-    <p>
-      <strong>畫圖</strong>：以獸圈參與為契機，近期開始比較有動力練習畫圖了，不過基本功嚴重不足，歡迎交流。
-    </p>
-
-    <p>
-      <strong>設計</strong>：喜歡平面設計、UI 設計、動態設計和字體設計，但是後兩個我只能欣賞。雖然完全不專業，但做設計算是長久的興趣，風格偏向扁平化和簡潔，不過這樣的追求顯然沒有套用在生活方式上，我本人應該是挺邋遢的。
-    </p>
-
-    <p>
-      其他興趣還包括遊戲（任天堂的玩比較多）、寫作（非常心虛因為很久沒寫了）、做各種小專案、上 YouTube 浪費時間等等。
-    </p>
-
-    <hr>
-
-    <p>
-      應該沒有社會常識之外的特殊雷點，就算有，被戳到我應該也不會表現出來（？），歡迎敲我或者給些繪畫上的回饋。現實中遇到的話我可能會有點不知所措，但還是會嘗試交流的，如果讓你感覺很尷尬的話先對不起。
-    </p>
-
-    <div style="height: 15px;"></div>
-
-    <div class="link-list">
-      <a class="link" href="https://x.com/easternowo" link-name="X">
-        <img src="images/logo_x.png" class="link-icon">
-      </a>
-      <a class="link" href="https://bsky.app/profile/easternowo.bsky.social" link-name="Bluesky">
-        <img src="images/logo_bluesky.png" class="link-icon">
-      </a>
-      <p id="link-title"></p>
-    </div>
-
-    <div style="height: 40px;"></div>
-
-    <div class="scroll-container">
-      <!-- Add wide content here (images, long text, multiple inline blocks) -->
-      <!-- <p>This is a very long line of text that will not wrap and will cause horizontal scrolling if the container is narrow enough.</p> -->
-      <img src="images/gallery/self.jpeg" alt="Description">
-      <img src="images/gallery/furtopia.jpg" alt="Description">
-      <img src="images/gallery/trip.jpeg" alt="Description">
-      <img src="images/gallery/maid.jpeg" alt="Description">
-      <img src="images/gallery/pine.jpeg" alt="Description">
-      <img src="images/gallery/walk.jpeg" alt="Description">
-      <!-- More content -->
-    </div>
-
-    <div class="dummy">
-
-    </div>
-
-    <!-- <div class="tabs">
-      <p class="tab">Page 1</p>
-      <p class="tab">Page 2</p>
-      <p class="tab">Page 3</p>
-    </div> -->
+    <div id="content"></div>
 
     <footer>
       © 2025 東 Eastern
     </footer>
   </main>
+
+  <div class="tabs">
+    <button class="tab" data-page="info">
+      <img src="images/icon_info.svg" class="tab-icon"/>
+      <div class="tab-label">簡介</div>
+    </button>
+
+    <button class="tab" data-page="fursona">
+      <img src="images/icon_fursona.svg" class="tab-icon"/>
+      <div class="tab-label">設定</div>
+    </button>
+
+    <!-- <button class="tab" data-page="characters">
+      <img src="images/icon_characters.svg" class="tab-icon"/>
+      <div class="tab-label">角色</div>
+    </button> -->
+  </div>
 
   <script src="script.js"></script>
 </body>
