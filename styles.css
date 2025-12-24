@@ -141,22 +141,31 @@ hr {
 .title-group {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     font-size: 16px;
     gap: 0.5em;
 }
 
 .title-circle {
     box-sizing: border-box;
-    height: 2.5em;
-    width: 2.5em;
+    height: 2.75em;
+    width: 2.75em;
+    border: 0.75em solid #C0D1DC;
     border-radius: 50%;
     z-index: 100;
-    border: 0.5em solid #C0D1DC;
 }
 
 h1 {
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
     font-size: 2.5em;
+
     margin: 0rem;
+    color: #444444;
+
+    transform: translate(0em, -0.04em);
 }
 
 @media (max-width: 800px) {
@@ -177,6 +186,10 @@ h1 {
 
     .scroll-container {
         padding: 0px 2rem;
+    }
+
+    .invisible-on-mobile {
+        visibility: hidden;
     }
 }
 
