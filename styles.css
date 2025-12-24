@@ -7,19 +7,15 @@ body {
     color: #222;
 }
 
-main {
+.sheet {
     position: relative;
     box-sizing: border-box;
     max-width: 800px;
     min-width: 320px;
-    margin: 4rem auto 8rem auto;
+    margin: 2rem auto 2rem auto;
     padding: 4rem 4rem;
     background-color: #fafafa;
     border-radius: 0.3rem;
-}
-
-#page-title {
-    font-size: 20px;
 }
 
 .profile {
@@ -41,12 +37,6 @@ main {
 
 .wordmark {
     width: 3.5em;
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    margin-top: 0rem;
 }
 
 p {
@@ -73,11 +63,11 @@ hr {
     height: 2px;
     background-color: #E2E6E9;
     border-width: 0;
-    
 }
 
 .social-link-list {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 15px;
 }
@@ -105,7 +95,7 @@ hr {
 .social-link:hover {
     background-color: #eeeeee;
     border: 2px solid #d1d5d8;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .social-link-icon {
@@ -148,67 +138,39 @@ hr {
   border-radius: 0.3rem;
 }
 
-.tabs {
-    position: fixed;
-    bottom: 20px; /* Distance from the bottom of the screen */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000; /* Ensures the button appears above other content */
-
-    padding: 6px;
-    margin: 0px;
-    gap: 6px;
-    border: 2px solid #E2E6E9;
-    border-radius: 16px;
-
+.title-group {
     display: flex;
-    /* width: 300px; */
-    justify-content: space-around;
-
-    background: #ffffff;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-.tab {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 5px;
-
-    margin: 0px;
-    padding: 6px 16px 6px 16px;
-    border-width: 0px;
-
-    border-radius: 10px;
-    background: #ffffff;
-
-    transition: 0.3s;
+    font-size: 16px;
+    gap: 0.5em;
 }
 
-.tab-icon {
-    width: 36px;
+.title-circle {
+    box-sizing: border-box;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    z-index: 100;
+    border: 0.5em solid #C0D1DC;
 }
 
-.tab-label {
-    font-size: 1rem;
-    color: #000000;
-    margin: 0px;
-    padding: 0px;
-}
-
-.tab:hover {
-    background: #eeeeee;
+h1 {
+    font-size: 2.5em;
+    margin: 0rem;
 }
 
 @media (max-width: 800px) {
-    main {
-        margin: 2rem auto 8rem auto;
-        padding: 3rem 2rem;
-        border-radius: 1rem;
+    .sheet {
+        margin: 1rem;
+        padding: 2.5rem 2rem;
     }
 
     .profile {
+        /* To change the size of profile circles */
+        font-size: 14px; 
+    }
+
+    .title-group {
         /* To change the size of profile circles */
         font-size: 14px; 
     }

@@ -9,41 +9,94 @@
 </head>
 <body>
   <main>
-    <div style="display: flex; gap: 20px; align-items: center;">
+    <div class="sheet">
       <div class="profile" style="transform: translate(-4px, -4px);">
         <img src="images/profile.jpg" alt="Profile image" class="profile-circle">
         <div class="profile-circle" style="background-color: #C0D1DC; margin-left: -2em; z-index: 99;">
           <img src="images/textmark.svg" class="wordmark"/>
         </div>
       </div>
-      <div id="page-title">簡介</div>
+
+      <div style="height: 15px;"></div>
+
+      <p>我是 東／Eastern。</p>
+      <p>這個名字並沒有什麼特別的由來，我只是單純喜歡「東」這個字的發音，也覺得它相當溫和中性。如果覺得一個字不太好念的話，也可以叫我「阿東」。</p>
+      <p>目前還在讀書，主要在<a href="https://www.facebook.com/NTUFurry/">臺大獸文化交流社</a>出沒。因為這個社團的關係，我從 2024 年開始比較積極地參與獸圈，在那之前雖然也去過幾次獸聚，但還是網路上潛水居多。</p>
+
+      <hr>
+
+      <p>興趣的部分主要是畫圖和設計。</p>
+      <p><strong>畫圖</strong>：以獸圈參與為契機，近期開始比較有動力練習畫圖了，不過基本功嚴重不足，歡迎交流。</p>
+      <p><strong>設計</strong>：喜歡平面設計、UI 設計、動態設計和字體設計，但是後兩個我只能欣賞。雖然完全不專業，但做設計算是長久的興趣，風格偏向扁平化和簡潔，不過這樣的追求顯然沒有套用在生活方式上，我本人應該是挺邋遢的。</p>
+      <p>其他興趣還包括遊戲（任天堂的玩比較多）、寫作（非常心虛因為很久沒寫了）、做各種小專案、上 YouTube 浪費時間等等。</p>
+
+      <hr>
+
+      <p>應該沒有社會常識之外的特殊雷點，就算有，被戳到我應該也不會表現出來（？），歡迎敲我或者給些繪畫上的回饋。現實中遇到的話我可能會有點不知所措，但還是會嘗試交流的，如果讓你感覺很尷尬的話先對不起。</p>
+
+      <div style="height: 15px;"></div>
+
+      <div class="social-link-list" style="transform: translate(-4px, 0px);">
+        <a class="social-link" href="https://x.com/easternowo" data-link-title="X">
+          <img src="images/logo_x.png" class="social-link-icon">
+        </a>
+        <a class="social-link" href="https://bsky.app/profile/easternowo.bsky.social" data-link-title="Bluesky">
+          <img src="images/logo_bluesky.png" class="social-link-icon">
+        </a>
+        <p id="social-link-title"></p>
+      </div>
+
+      <div style="height: 40px;"></div>
+
+      <div class="scroll-container">
+        <img src="images/gallery/self.jpeg" alt="A wolf holding an umbrella on a footbridge in the rain">
+        <img src="images/gallery/furtopia.jpg" alt="A falcon and deer together in a big city">
+        <img src="images/gallery/trip.jpeg" alt="A fennec fox and a black cat go for a ride">
+        <img src="images/gallery/maid.jpeg" alt="A deer maid">
+        <img src="images/gallery/pine.jpeg" alt="A wolfdog with 'NTUWU' written behind">
+        <img src="images/gallery/walk.jpeg" alt="A wolf walking in an alley at dusk">
+      </div>
+
+      <div class="dummy"></div>
     </div>
 
-    <div style="height: 15px;"></div>
+    <div class="sheet">
+      <div class="title-group">
+        <div class="title-circle"></div>
+        <h1>設定</h1>
+      </div>
+      
+      <div style="height: 15px;"></div>
 
-    <div id="content"></div>
+      <img src="../images/ref.jpg" style="box-sizing: border-box; width: 100%; border: 2px solid #E2E6E9; border-radius: 0.3rem;"/>
 
-    <footer>
+      <div style="height: 15px;"></div>
+
+      <ul>
+          <li>一匹棕色毛、藍色眼睛的狼。</li>
+          <li>腹部毛色為淺褐色接近全白，耳朵、尾巴根部和小腿以下的毛色稍深。</li>
+          <li>右耳處有銀色和藍色的兩個耳環。</li>
+          <li>尾巴像狐狸一般蓬鬆。</li>
+          <li>腳無論畫成趾行還是蹠行都可以。</li>
+          <li>可以選擇性配戴眼鏡。</li>
+      </ul>
+    </div>
+
+    <div class="sheet">
+      <div class="title-group">
+        <div class="title-circle"></div>
+        <h1>角色</h1>
+      </div>
+      
+      <div style="height: 15px;"></div>
+
+      <p>施工中 🚧</p>
+
+      <footer>
       © 2025 東 Eastern
     </footer>
+    </div>
   </main>
-
-  <div class="tabs">
-    <button class="tab" data-page="info">
-      <img src="images/icon_info.svg" class="tab-icon"/>
-      <div class="tab-label">簡介</div>
-    </button>
-
-    <button class="tab" data-page="fursona">
-      <img src="images/icon_fursona.svg" class="tab-icon"/>
-      <div class="tab-label">設定</div>
-    </button>
-
-    <!-- <button class="tab" data-page="characters">
-      <img src="images/icon_characters.svg" class="tab-icon"/>
-      <div class="tab-label">角色</div>
-    </button> -->
-  </div>
 
   <script src="script.js"></script>
 </body>
