@@ -8,6 +8,7 @@ body {
 }
 
 main {
+    position: relative;
     max-width: 700px;
     min-width: 320px;
     margin: 4rem auto;
@@ -16,15 +17,16 @@ main {
     border-radius: 0.3rem;
 }
 
-@media (max-width: 600px) {
-    main {
-        padding: 3rem 2rem;
-    }
+.profile {
+    display: flex;
+    transform: translate(-4px, -4px);
+    font-size: 16px;
 }
 
-.profile {
-    height: 150px;
-    width: 150px;
+.profile-circle {
+    height: 9em;
+    width: 9em;
+    min-width: 9em;
     border-radius: 50%;
     z-index: 100;
 
@@ -34,7 +36,7 @@ main {
 }
 
 .wordmark {
-    width: 60px;
+    width: 3.5em;
 }
 
 h1 {
@@ -44,7 +46,7 @@ h1 {
 }
 
 p {
-    font-size: 14pt;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
 }
 
@@ -100,6 +102,103 @@ hr {
 .link-icon {
     width: 40px;
     height: 40px;
+}
+
+.dummy {
+    height: 20rem;
+}
+
+.scroll-container {
+    position: absolute;
+    left: 0px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-wrap: nowrap;
+    
+    /* Set a specific width for the container, e.g., 100% of the viewport */
+    width: 100%;
+    height: 20rem;
+    
+    /* Enable horizontal scrolling only when content overflows the X-axis */
+    overflow-x: auto;
+    
+    /* Hide the vertical scrollbar, if desired */
+    /* overflow-y: hidden;  */
+    
+    /* Prevent content (like text) from wrapping to the next line, forcing it onto a single line */
+    /* white-space: nowrap; */
+    gap: 12px;
+    padding: 0px 4rem;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-container {
+    scrollbar-width: none;
+}
+
+.scroll-container > img {
+  display: inline-block;
+  height: 100%;
+  border-radius: 0.3rem;
+}
+
+.tabs {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom of the screen */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Ensures the button appears above other content */
+
+    padding: 6px;
+    margin: 0px;
+    border: 2px solid #E2E6E9;
+    border-radius: 16px;
+
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+
+    background: #ffffff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    gap: 15px
+}
+
+.tab {
+    margin: 0px;
+    border-radius: 10px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-grow: 1;
+    background: #ffffff;
+    
+
+    transition: 0.3s;
+}
+
+.tab:hover {
+    background: #eeeeee;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 3rem 2rem;
+    }
+
+    .profile {
+        /* To change the size of profile circles */
+        font-size: 14px; 
+    }
+
+    .scroll-container {
+        padding: 0px 2rem;
+    }
 }
 
 footer {

@@ -9,9 +9,9 @@
 </head>
 <body>
   <main>
-    <div style="display: flex; transform: translate(-4px, -4px);">
-      <img src="images/profile.png" alt="Profile image" class="profile">
-      <div class="profile" style="background-color: #C0D1DC; margin-left: -35px; z-index: 99;">
+    <div class="profile">
+      <img src="images/profile.jpg" alt="Profile image" class="profile-circle">
+      <div class="profile-circle" style="background-color: #C0D1DC; margin-left: -2em; z-index: 99;">
         <img src="images/textmark.svg" class="wordmark"/>
       </div>
     </div>
@@ -60,18 +60,45 @@
 
     <div style="height: 15px;"></div>
 
-    <div class="link-list" style="transform: translate(-4px, 0px);">
-      <a class="link" href="https://x.com/easternowo">
+    <div class="link-list">
+      <a class="link" href="https://x.com/easternowo" link-name="X">
         <img src="images/logo_x.png" class="link-icon">
       </a>
-      <a class="link" href="https://bsky.app/profile/easternowo.bsky.social">
+      <a class="link" href="https://bsky.app/profile/easternowo.bsky.social" link-name="Bluesky">
         <img src="images/logo_bluesky.png" class="link-icon">
       </a>
+      <p id="link-title"></p>
     </div>
+
+    <div style="height: 40px;"></div>
+
+    <div class="scroll-container">
+      <!-- Add wide content here (images, long text, multiple inline blocks) -->
+      <!-- <p>This is a very long line of text that will not wrap and will cause horizontal scrolling if the container is narrow enough.</p> -->
+      <img src="images/gallery/self.jpeg" alt="Description">
+      <img src="images/gallery/furtopia.jpg" alt="Description">
+      <img src="images/gallery/trip.jpeg" alt="Description">
+      <img src="images/gallery/maid.jpeg" alt="Description">
+      <img src="images/gallery/pine.jpeg" alt="Description">
+      <img src="images/gallery/walk.jpeg" alt="Description">
+      <!-- More content -->
+    </div>
+
+    <div class="dummy">
+
+    </div>
+
+    <!-- <div class="tabs">
+      <p class="tab">Page 1</p>
+      <p class="tab">Page 2</p>
+      <p class="tab">Page 3</p>
+    </div> -->
 
     <footer>
       © 2025 東 Eastern
     </footer>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
