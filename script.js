@@ -14,4 +14,11 @@
 const footnote = document.querySelector('footer');
 const year = new Date().getFullYear();
 
-footnote.textContent = `© ${year} 東`
+footnote.textContent = `© ${year} 東. Glass effect provided by Mike Bespalov.`
+
+const follower = document.querySelector('.glass-cursor');
+
+document.addEventListener('mousemove', (e) => {
+  follower.style.left = (e.pageX - window.scrollX) + 'px';
+  follower.style.top = (e.pageY - window.scrollY) + 'px';
+});

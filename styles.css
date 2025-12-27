@@ -5,6 +5,8 @@ body {
     line-height: 1.6;
     background: #E2E6E9;
     color: #222;
+
+    cursor: none;
 }
 
 .sheet {
@@ -197,6 +199,20 @@ h1 {
 
 .title-group > h1 {
     transform: translate(0em, -0.04em);
+}
+
+.glass-cursor {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: rgba(255, 255, 255, .08);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, .3), 0 8px 32px rgba(0, 0, 0, .05);
+    filter: drop-shadow(-8px -10px 46px #0000005f);
+    backdrop-filter: brightness(1.1) blur(1px) url(#glassFilter);
 }
 
 @media (max-width: 800px) {
