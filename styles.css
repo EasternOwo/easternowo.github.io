@@ -127,10 +127,13 @@ hr {
     height: 30px;
 }
 
+.link:hover {
+    text-decoration: none;
+}
+
 @media (hover: hover) {
     .link:hover {
         filter: brightness(90%);
-        text-decoration: none;
     }
 }
 
