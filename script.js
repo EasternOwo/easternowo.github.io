@@ -21,10 +21,9 @@ function copyText() {
 
   navigator.clipboard.writeText(text).then(() => {
     const element = document.getElementById('discord-link-text');
-    const originalText = element.textContent;
     element.textContent = '已複製 ID 到剪貼簿：eastern.owo';
     setTimeout(() => {
-      element.textContent = originalText;
+      element.textContent = '可以在這裡跟我說話';
     }, 2000);
   }).catch(err => {
     console.error('Could not copy text: ', err);
