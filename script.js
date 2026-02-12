@@ -15,3 +15,18 @@ const footnote = document.querySelector('footer');
 const year = new Date().getFullYear();
 
 footnote.textContent = `© ${year} 東`
+
+function copyText() {
+  var text = "eastern.owo";
+
+  navigator.clipboard.writeText(text).then(() => {
+    const element = document.getElementById('discord-link-text');
+    const originalText = element.textContent;
+    element.textContent = '已複製 ID 到剪貼簿：eastern.owo';
+    setTimeout(() => {
+      element.textContent = originalText;
+    }, 2000);
+  }).catch(err => {
+    console.error('Could not copy text: ', err);
+  });
+}
