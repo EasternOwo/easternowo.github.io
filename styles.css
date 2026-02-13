@@ -206,14 +206,14 @@ h1 {
 
 h2 {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: #444444;
 }
 
 
 h3 {
     margin: 0;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     font-weight: 400;
     color: #666666;
 }
@@ -252,16 +252,18 @@ h3 {
         grid-template-columns: 1fr;
     }
 
-    .character-list {
-        grid-template-columns: 1fr 1fr;
-    }
-
     .scroll-container {
         padding: 0px 2rem;
     }
 
     .invisible-on-mobile {
         visibility: hidden;
+    }
+}
+
+@media (max-width: 600px) {
+    .character-list {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
