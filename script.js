@@ -1,15 +1,14 @@
-// const links = document.querySelectorAll('.social-link');
-// const title = document.getElementById('social-link-title');
+const items = document.querySelectorAll(".pfp-square");
 
-// links.forEach(link => {
-//     link.addEventListener('mouseenter', () => {
-//         title.textContent = link.getAttribute('data-link-title');
-//     });
+items.forEach(item => {
+  item.addEventListener("mouseenter", () => {
+    document.body.style.background = item.dataset.color;
+  });
 
-//     link.addEventListener('mouseleave', () => {
-//         title.textContent = '';
-//     });
-// });
+  item.addEventListener("mouseleave", () => {
+    document.body.style.background = "";
+  });
+});
 
 const footnote = document.querySelector('footer');
 const year = new Date().getFullYear();

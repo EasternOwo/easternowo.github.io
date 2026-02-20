@@ -5,6 +5,8 @@ body {
     line-height: 1.6;
     background: #E2E6E9;
     color: #222;
+
+    transition: 1s;
 }
 
 .sheet {
